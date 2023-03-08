@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ss5 bai tap 1</title>
+</head>
+<body>
+<!--Bai 1: Tính điểm-->
+<button type="button" onclick="tinhDiem();">Tính điểm</button>
+<br><br><hr>
+<!--Bai 1: Đổi nhiệt độ-->
+<button type="button" onclick="doiNhietDo();">Đổi nhiệt độ</button>
+<br><br><hr>
+<!--Bai 3, 4: Diện tích & Chu vi hình tròn-->
+<button type="button" onclick="hinhTron();">Diện tích & Chu vi hình tròn</button>
+</body>
+<script>
+    function tinhDiem() {
+        let inputDiemVL = prompt('Điểm Vật Lý: ');
+        let inputDiemHH = prompt('Điểm Hóa: ');
+        let inputDiemSH = prompt('Điểm Sinh: ');
+        let diemVL = +(inputDiemVL);
+        let diemHH = +(inputDiemHH);
+        let diemSH = +(inputDiemSH);
+        let sum = diemVL + diemHH + diemSH;
+        let avg = (sum)/3;
+        document.write('Điểm Vật Lý: '+ diemVL + '<br/>');
+        document.write('Điểm Hóa: '+ diemHH + '<br/>');
+        document.write('Điểm Sinh: '+ diemSH + '<br/>');
+        document.write('Tổng Điểm: '+ sum + '<br/>');
+        document.write('Điểm Trung Bình: '+ avg);
+    }
+    function doiNhietDo() {
+        let inputDoC = prompt('Nhập nhiệt độ C: ');
+        let doC = +inputDoC;
+        let doF = (doC/5*9)+32;
+        document.write('Độ C: '+ doC + '<br/>');
+        document.write('Độ F: '+ doF);
+    }
+    function hinhTron() {
+        let inputBanKinh = prompt('Nhập Bán Kính: ');
+        let banKinh = +(inputBanKinh);
+        let chuVi = banKinh*2*3.14;
+        console.log(banKinh*banKinh);
+        let dienTich = banKinh*banKinh*3.14
+        document.write('Bán Kính: '+ banKinh + '<br/>');
+        document.write('Chu Vi: '+ chuVi + '<br/>');
+        document.write('Diện Tích: '+ dienTich);
+    }
+</script>
+</html>
